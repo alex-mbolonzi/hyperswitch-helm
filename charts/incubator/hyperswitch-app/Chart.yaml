@@ -15,5 +15,5 @@ dependencies:
     condition: postgresql.enabled
   - name: hyperswitch-card-vault
     version: 0.1.0
-    repository: "file://../hyperswitch-card-vault"
+    repository: "file://hyperswitch-heml/charts/incubator/hyperswitch-card-vault"
     condition: hyperswitch-card-vault.enabled
