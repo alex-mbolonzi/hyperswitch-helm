@@ -395,5 +395,5 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
 
 hyperswitch-card-vault:
-  enabled: true
+  enabled: false
 
