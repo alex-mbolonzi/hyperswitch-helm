@@ -3,7 +3,7 @@ application:
   # The is the configuration that is globally common for all the application related deployments
   global:
     # Number of replicas to be used for the application by default (for server and consumer)
-    replicas: 3
+    replicas: 1
     # Wait time allowed for the deployment before the deployment is marked as failed
     progressDeadlineSeconds: 600
     # The strategy that can be used to replace the old pods by new ones
@@ -54,7 +54,7 @@ application:
 
   server:
     # Number of replicas to be used for the application
-    replicas: 3
+    replicas: 1
     # Wait time allowed for the deployment before the deployment is marked as failed
     progressDeadlineSeconds: 600
     # The strategy that can be used to replace the old pods by new ones
