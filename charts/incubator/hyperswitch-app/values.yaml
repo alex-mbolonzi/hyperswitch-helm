@@ -397,3 +397,6 @@ autoscaling:
 hyperswitch-card-vault:
   enabled: false
 
+qovery:
+  namespace: qovery.env.QOVERY_KUBERNETES_NAMESPACE_NAME
+
