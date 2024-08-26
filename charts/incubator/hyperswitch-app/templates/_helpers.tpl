@@ -1,6 +1,6 @@
 # Define `hyperswitch.fullname` template
 {{- define "hyperswitch.fullname" -}}
-{{- default .Chart.Name .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
+{{- default .Chart.Name .Values.fullnameOverride | trunc 63 -}}
 {{- end -}}
 
 # Define `hyperswitch.labels` template
@@ -23,12 +23,12 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 
 # Define `hyperswitch.name` template
 {{- define "hyperswitch.name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+{{- default .Chart.Name .Values.nameOverride | trunc 63 -}}
 {{- end -}}
 
 # Define `hyperswitch.chart` template
 {{- define "hyperswitch.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
+{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 -}}
 {{- end -}}
 
 
