@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hyperswitch-alb-ingress
-  namespace:  {{ .RELEASE_NAME }}
+  namespace:  {{ .RELEASE_NAME.Namespace }}
   annotations:
     alb.ingress.kubernetes.io/backend-protocol: HTTP
     alb.ingress.kubernetes.io/backend-protocol-version: HTTP1
