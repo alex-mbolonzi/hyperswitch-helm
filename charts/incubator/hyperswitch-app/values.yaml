@@ -398,3 +398,6 @@ hyperswitch-card-vault:
   enabled: false
 
 
+hyperswitch-ns:
+  name: qovery.env.HYPERSWITCH_NAMESPACE
+
