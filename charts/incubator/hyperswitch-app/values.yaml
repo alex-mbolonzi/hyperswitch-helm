@@ -398,5 +398,5 @@ hyperswitch-card-vault:
   enabled: false
 
 hyperswitchNs:
-  name: qovery.env.HYPERSWITCH_NAMESPACE
+  name: "zb2c4ddd4-hyperswitch"
 
