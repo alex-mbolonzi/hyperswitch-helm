@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hyperswitch-server
-  namespace: {{ qovery.env.QOVERY_KUBERNETES_NAMESPACE_NAME }}
+  namespace: { qovery.env.QOVERY_KUBERNETES_NAMESPACE_NAME }
 spec:
   internalTrafficPolicy: Cluster
   ipFamilies:
