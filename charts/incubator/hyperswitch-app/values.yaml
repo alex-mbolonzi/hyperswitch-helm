@@ -397,6 +397,6 @@ autoscaling:
 hyperswitch-card-vault:
   enabled: false
 
-hyperswitch-ns:
+hyperswitchNs:
   name: qovery.env.HYPERSWITCH_NAMESPACE
 
