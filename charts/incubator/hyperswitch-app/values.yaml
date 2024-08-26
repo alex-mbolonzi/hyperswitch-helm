@@ -398,5 +398,5 @@ hyperswitch-card-vault:
   enabled: false
 
 hyperswitchNs:
-  name: "zb2c4ddd4-hyperswitch"
+  name: zb2c4ddd4-hyperswitch
 
