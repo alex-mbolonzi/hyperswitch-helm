@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hyperswitch-alb-ingress
-  #namespace:  {{ .Release.Namespace }}
   namespace: qovery.env.QOVERY_KUBERNETES_NAMESPACE_NAME
   annotations:
     alb.ingress.kubernetes.io/backend-protocol: HTTP
