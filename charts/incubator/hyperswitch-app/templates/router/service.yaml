@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hyperswitch-server
-  namespace: {{ .Values.hyperswitchNs.name }}
+  namespace: "{{ .Values.hyperswitchNs.name }}"
 spec:
   internalTrafficPolicy: Cluster
   ipFamilies:
