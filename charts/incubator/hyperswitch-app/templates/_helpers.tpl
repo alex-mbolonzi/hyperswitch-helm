@@ -1,7 +1,7 @@
 # Define `hyperswitch.fullname` template
-{{- define "hyperswitch.fullname" -}}
-{{- default .Chart.Name .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
+# {{- define "hyperswitch.fullname" -}}
+# {{- default .Chart.Name .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
+# {{- end -}}
 
 # Define `hyperswitch.labels` template
 {{- define "hyperswitch.labels" -}}
@@ -22,14 +22,14 @@ app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end -}}
 
 # Define `hyperswitch.name` template
-{{- define "hyperswitch.name" -}}
-{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
+# {{- define "hyperswitch.name" -}}
+# {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+# {{- end -}}
 
 # Define `hyperswitch.chart` template
-{{- define "hyperswitch.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
+# {{- define "hyperswitch.chart" -}}
+# {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
+# {{- end -}}
 
 
 {{/* Redis configuration validation template */}}
