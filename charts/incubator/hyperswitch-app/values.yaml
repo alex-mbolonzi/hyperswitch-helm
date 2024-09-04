@@ -295,15 +295,15 @@ application:
 # configuration values to be used by the service that is connected to the hyperswitch server
 services:
   router:
-    version: v1.110.0
-    image: juspaydotin/hyperswitch-router:v1.110.0-standalone
+    version: 2024.09.03.1-standalone
+    image: juspaydotin/hyperswitch-router:2024.09.03.1-standalone
     host: http://localhost:8080
   consumer:
-    image: juspaydotin/hyperswitch-consumer:v1.110.0-standalone
+    image: juspaydotin/hyperswitch-consumer:2024.09.03.1-standalone
   producer:
-    image: juspaydotin/hyperswitch-producer:v1.110.0-standalone
+    image: juspaydotin/hyperswitch-producer:2024.09.03.1-standalone
   controlCenter:
-    image: juspaydotin/hyperswitch-control-center:v1.32.0
+    image: juspaydotin/hyperswitch-control-center:2024.09.04.0
   sdk:
     host: http://localhost:9090
     version: 0.80.0
