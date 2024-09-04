@@ -347,6 +347,8 @@ postgresql:
       username: hyperswitch
       password: qovery.env.HYPERSWITCH_DB_PASSWORD
       database: hyperswitch
+      replicationUsername: hyperswitch
+      replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
   architecture: replication
   replication:
     synchronousCommit: "off"
