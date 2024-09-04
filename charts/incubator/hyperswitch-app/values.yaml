@@ -337,36 +337,19 @@ redisMiscConfig:
 
 postgresql:
   enabled: true
-  postgresql:
-    auth:
-      username: hyperswitch
-      password: qovery.env.HYPERSWITCH_DB_PASSWORD
+  architecture: standalone  # Change this from 'replication' to 'standalone'
   auth:
-      replicationUsername: replicator
-      replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
-  architecture: replication
-  replication:
-    username: replicator
+    username: hyperswitch
     password: qovery.env.HYPERSWITCH_DB_PASSWORD
-    synchronousCommit: "off"
-    numSynchronousReplicas: 0
-  primary:
-    name: ""
-    resources:
-      requests:
-        cpu: 150m
-  readReplicas:
-    replicaCount: 1
-    resources:
-      requests:
-        cpu: 100m
-    auth:
-      username: replicator
-      password: qovery.env.HYPERSWITCH_DB_PASSWORD
-      database: hyperswitch
-  initdbScripts:
-    set-passwords.sql: |
-      CREATE USER replicator WITH REPLICATION ENCRYPTED PASSWORD qovery.env.HYPERSWITCH_DB_PASSWORD;
+    database: hyperswitch
+  
+  # Remove or comment out any replication-specific configurations
+  # primary:
+  #   ...
+  # readReplicas:
+  #   ...
+
+  # Other PostgreSQL configurations...
 
 externalPostgresql:
   # - Link this service to an external Postgres server
