@@ -341,11 +341,11 @@ postgresql:
     postgresql:
       auth:
         username: hyperswitch
-        password: ZGJwYXNzd29yZDEx
+        password: qovery.env.HYPERSWITCH_DB_PASSWORD
         database: hyperswitch
   auth:
     replicationUsername: hyperswitch
-    replicationPassword: ZGJwYXNzd29yZDEx
+    replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
     database: hyperswitch
   architecture: replication
   replication:
