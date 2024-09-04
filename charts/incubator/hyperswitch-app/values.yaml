@@ -311,6 +311,7 @@ services:
 redis:
   # - enable Bitnami redis sub-chart helm installation
   enabled: true
+  namespace: qovery.env.KEMETX_NAMESPACE_NAME
   master:
     count: 1
   replica:
@@ -337,12 +338,16 @@ redisMiscConfig:
 
 postgresql:
   enabled: true
+  namespace: qovery.env.KEMETX_NAMESPACE_NAME
   architecture: standalone  # Change this from 'replication' to 'standalone'
   auth:
     username: hyperswitch
     password: qovery.env.HYPERSWITCH_DB_PASSWORD
     database: hyperswitch
-  
+  initdbScripts:
+       grant-privileges.sql: |
+         GRANT ALL PRIVILEGES ON DATABASE hyperswitch TO hyperswitch;
+         ALTER USER hyperswitch WITH CREATEDB CREATEROLE REPLICATION;
   # Remove or comment out any replication-specific configurations
   # primary:
   #   ...
