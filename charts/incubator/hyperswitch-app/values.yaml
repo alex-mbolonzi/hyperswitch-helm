@@ -177,7 +177,7 @@ application:
       sdk_url: http://localhost:9090/0.35.4/v0/HyperLoader.js
   consumer:
     # Number of replicas to be used for the application
-    replicas: 1
+    replicas: 0
     # Wait time allowed for the deployment before the deployment is marked as failed
     progressDeadlineSeconds: 600
     # The strategy that can be used to replace the old pods by new ones
@@ -215,7 +215,7 @@ application:
 
   producer:
     # Number of replicas to be used for the application
-    replicas: 1
+    replicas: 0
     # Wait time allowed for the deployment before the deployment is marked as failed
     progressDeadlineSeconds: 600
     # The strategy that can be used to replace the old pods by new ones
@@ -255,7 +255,7 @@ application:
     # Image to be used by the deployment to create the pod
     image: juspaydotin/hyperswitch-control-center:v1.30.0
     # Number of replicas to be used for the application
-    replicas: 1
+    replicas: 0
     # Wait time allowed for the deployment before the deployment is marked as failed
     progressDeadlineSeconds: 600
     # The strategy that can be used to replace the old pods by new ones
