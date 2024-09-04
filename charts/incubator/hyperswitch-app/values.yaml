@@ -342,11 +342,11 @@ postgresql:
       username: hyperswitch
       password: qovery.env.HYPERSWITCH_DB_PASSWORD
   auth:
-      replicationUsername: hyperswitch
+      replicationUsername: replicator
       replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
   architecture: replication
   replication:
-    username: hyperswitch
+    username: replicator
     password: qovery.env.HYPERSWITCH_DB_PASSWORD
     synchronousCommit: "off"
     numSynchronousReplicas: 0
@@ -361,13 +361,12 @@ postgresql:
       requests:
         cpu: 100m
     auth:
-      username: hyperswitch
+      username: replicator
       password: qovery.env.HYPERSWITCH_DB_PASSWORD
       database: hyperswitch
   initdbScripts:
     set-passwords.sql: |
-      ALTER USER hyperswitch WITH PASSWORD 'qovery.env.HYPERSWITCH_DB_PASSWORD';
-      ALTER USER hyperswitch WITH REPLICATION;
+      CREATE USER replicator WITH REPLICATION ENCRYPTED PASSWORD qovery.env.HYPERSWITCH_DB_PASSWORD;
 
 externalPostgresql:
   # - Link this service to an external Postgres server
