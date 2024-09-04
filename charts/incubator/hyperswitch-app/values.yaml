@@ -346,17 +346,13 @@ postgresql:
     auth:
       username: hyperswitch
       password: qovery.env.HYPERSWITCH_DB_PASSWORD
-      database: hyperswitch
-      replicationUsername: hyperswitch
-      replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
+  auth:
+    replicationUsername: hyperswitch
+    replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
   architecture: replication
   replication:
     synchronousCommit: "off"
     numSynchronousReplicas: 0
-  auth:
-    replicationUsername: hyperswitch
-    replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
-    database: hyperswitch
   primary:
     name: ""
     resources:
@@ -371,6 +367,10 @@ postgresql:
       username: hyperswitch
       password: qovery.env.HYPERSWITCH_DB_PASSWORD
       database: hyperswitch
+  initdbScripts:
+    set-passwords.sql: |
+      ALTER USER hyperswitch WITH PASSWORD '${HYPERSWITCH_DB_PASSWORD}';
+      ALTER USER hyperswitch WITH REPLICATION;
 
 externalPostgresql:
   # - Link this service to an external Postgres server
