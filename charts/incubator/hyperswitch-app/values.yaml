@@ -340,9 +340,13 @@ postgresql:
   global:
     postgresql:
       auth:
-        username: "hyperswitch"
-        password: "ZGJwYXNzd29yZDEx"
-        database: "hyperswitch"
+        username: hyperswitch
+        password: ZGJwYXNzd29yZDEx
+        database: hyperswitch
+  auth:
+    replicationUsername: hyperswitch
+    replicationPassword: ZGJwYXNzd29yZDEx
+    database: hyperswitch
   architecture: replication
   replication:
     synchronousCommit: "off"
