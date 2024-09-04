@@ -347,20 +347,12 @@ postgresql:
     replicationUsername: hyperswitch
     replicationPassword: qovery.env.HYPERSWITCH_DB_PASSWORD
     database: hyperswitch
-  architecture: replication
-  replication:
-    synchronousCommit: "off"
-    numSynchronousReplicas: 0
+  architecture: standalone
   primary:
     name: ""
     resources:
       requests:
         cpu: 150m
-  readReplicas:
-    replicaCount: 0
-    resources:
-      requests:
-        cpu: 100m
 
 externalPostgresql:
   # - Link this service to an external Postgres server
