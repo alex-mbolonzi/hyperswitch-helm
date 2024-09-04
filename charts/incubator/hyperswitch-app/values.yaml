@@ -365,6 +365,10 @@ postgresql:
     resources:
       requests:
         cpu: 100m
+    auth:
+      username: hyperswitch
+      password: qovery.env.HYPERSWITCH_DB_PASSWORD
+      database: hyperswitch
 
 externalPostgresql:
   # - Link this service to an external Postgres server
